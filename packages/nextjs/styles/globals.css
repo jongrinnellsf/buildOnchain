@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Kalam:wght@300;400;700&display=swap');
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
@@ -5,10 +6,13 @@
 :root,
 [data-theme] {
   background: oklch(var(--b2));
+  color-scheme: dark;
 }
 
 body {
   min-height: 100vh;
+  background-color: #111827; /* gray-900 */
+  color: #f3f4f6; /* gray-100 */
 }
 
 h1,
@@ -17,10 +21,12 @@ h3,
 h4 {
   margin-bottom: 0.5rem;
   line-height: 1;
+  color: #ffffff;
 }
 
 p {
   margin: 1rem 0;
+  color: #d1d5db; /* gray-300 */
 }
 
 .btn {
@@ -29,4 +35,210 @@ p {
 
 .btn.btn-ghost {
   @apply shadow-none;
+}
+
+/* Vibe animations */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.vibe-text {
+  animation: glow 8s ease-in-out infinite;
+  font-weight: 200;
+   
+}
+
+.vibe-logo {
+  display: inline-block;
+  background: linear-gradient(90deg, #eb49ff, #ff6ec4);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  text-shadow: none;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  animation: gradientShift 6s linear infinite;
+}
+
+.onchain-glow {
+  display: inline-block;
+  background: linear-gradient(90deg, #9333ea, #db2777, #f97316);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s linear infinite;
+  position: relative;
+  text-shadow: none;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  font-family: 'Kalam', cursive;
+}
+
+.onchain-glow::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: blur(12px);
+  opacity: 0.7;
+  background-image: linear-gradient(90deg, #9333ea, #db2777, #f97316);
+  background-size: 200% auto;
+  animation: gradientShift 6s linear infinite;
+}
+
+.gradient-btn {
+  background: linear-gradient(90deg, #9333ea, #db2777, #f97316);
+  background-size: 200% auto;
+  animation: gradientShift 6s linear infinite;
+  border: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+}
+
+.gradient-btn:active {
+  transform: translateY(0);
+}
+
+.gradient-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(8px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-btn:hover::after {
+  opacity: 0.7;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: 
+    /* Central gradient overlay */
+    linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    /* Top vignette */
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 20%
+    ),
+    /* Bottom vignette */
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 20%
+    ),
+    /* Left vignette */
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 20%
+    ),
+    /* Right vignette */
+    linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 20%
+    ),
+    /* Corner vignette intensifier */
+    radial-gradient(
+      ellipse at center,
+      transparent 30%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+  /* Subtle box shadow inset for additional depth */
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+}
+
+.card {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #9333ea, #db2777, #f97316);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+  mix-blend-mode: overlay;
 }

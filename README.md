@@ -1,8 +1,8 @@
-# ⚡ Build Onchain ⚡
+# ⚡ Vibe Onchain ⚡
 
- ⚡ Build Onchain ⚡ is an opinionated, LLM friendly fork of Scaffold-Alchemy, which is based off ScaffoldETH, a popular starter project to build onchain app on Ethereum. It is everything you need to build onchain apps on Ethereum. You can get started immediately NextJS, TypeScript, Hardhat, AccountKit, Enhanced APIs and Subgraphs 🤩 
+ ⚡ Vibe Onchain ⚡ is an opinionated, LLM friendly fork of Scaffold-Alchemy, which is based off ScaffoldETH, a popular starter project to build onchain app on Ethereum. It is everything you need to build onchain apps on Ethereum. You can get started immediately NextJS, TypeScript, Hardhat, AccountKit, Enhanced APIs and Subgraphs 🤩 
  
- ⚡ Build Onchain ⚡ uses Base L2 (Sepolia), and includes a /docs folder with much of Alchemy's documentation and APIs. Bring this repo it into your favoriate AI powered IDE, and build any onchain app you can think of!
+ ⚡ Vibe Onchain ⚡ uses Base L2 (Sepolia), and includes a /docs folder with much of Alchemy's documentation and APIs. Bring this repo it into your favoriate AI powered IDE, and build any onchain app you can think of!
 
 ## Requirements
 
@@ -14,7 +14,7 @@ Before you begin, you will need to install the following tools:
 
 ## Quickstart
 
-To get started with ⚡ Build Onchain ⚡, follow the steps below:
+To get started with ⚡ Vibe Onchain ⚡, follow the steps below:
 
 1. Clone this repo
 
@@ -31,7 +31,7 @@ yarn
 yarn start
 ```
 
-4. Visit your app on: `http://localhost:3000`
+4. Visit your app webpage
 
 5. Start hacking! Update your front-end. Modify the smart contract, add new smart contracts, and deploy them via: 
 

@@ -44,7 +44,18 @@ export const getMetadata = ({
       images: [imageUrl],
     },
     icons: {
-      icon: [{ url: "/favicon.png", sizes: "32x32", type: "image/png" }],
+      icon: [
+        {
+          url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><text y='16' font-size='20'>✨</text></svg>",
+          type: "image/svg+xml",
+        },
+      ],
+      shortcut: [
+        {
+          url: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><text y='16' font-size='20'>✨</text></svg>",
+          type: "image/svg+xml",
+        },
+      ],
     },
   };
 };

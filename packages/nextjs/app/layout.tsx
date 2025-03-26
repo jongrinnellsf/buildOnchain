@@ -6,8 +6,8 @@ import "~~/styles/globals.css";
 import { getMetadata } from "~~/utils/scaffold-alchemy/getMetadata";
 
 export const metadata = getMetadata({
-  title: "Scaffold-Alchemy App",
-  description: "Built with 🏗 Scaffold-Alchemy",
+  title: "Vibe Onchain",
+  description: "Build on-chain applications easily",
 });
 
 const ScaffoldEthApp = ({ children }: { children: React.ReactNode }) => {
